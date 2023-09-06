@@ -50,3 +50,8 @@ FROM autores
 LEFT JOIN livros ON autores.id = livros.autor_id
 GROUP BY autores.id
 HAVING COUNT(livros.id) > 2;
+
+-- exercício 11
+SELECT livros.titulo, autores.nome AS autor
+FROM livros
+JOIN autores ON livros.autor_id = autores.id;
